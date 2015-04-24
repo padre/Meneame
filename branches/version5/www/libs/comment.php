@@ -520,6 +520,7 @@ class Comment extends LCPBase {
 		// Check if is an admin comment
 		if ($current_user->user_level == 'god' && $_POST['type'] == 'admin') {
 			$comment->type = 'admin';
+			$comment->karma = $globals['karma_base'];
 		}
 
 		// Don't allow to comment with a clone
